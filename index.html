@@ -535,16 +535,16 @@ function blowCandle(){
 
 function bigConfetti(){
   const c=['#ff8fb3','#ff4d8d','#ffd9e6','#fff0f4','#ff6fa3'];
-  canvasConfetti({particleCount:220,spread:100,origin:{y:.55},colors:c,startVelocity:35});
-  setTimeout(()=>canvasConfetti({particleCount:100,angle:55,spread:65,origin:{x:0,y:.55},colors:c}),300);
-  setTimeout(()=>canvasConfetti({particleCount:100,angle:125,spread:65,origin:{x:1,y:.55},colors:c}),500);
-  setTimeout(()=>canvasConfetti({particleCount:80,spread:120,origin:{y:.3},colors:c,startVelocity:20}),800);
+  confetti({particleCount:220,spread:100,origin:{y:.55},colors:c,startVelocity:35});
+  setTimeout(()=>confetti({particleCount:100,angle:55,spread:65,origin:{x:0,y:.55},colors:c}),300);
+  setTimeout(()=>confetti({particleCount:100,angle:125,spread:65,origin:{x:1,y:.55},colors:c}),500);
+  setTimeout(()=>confetti({particleCount:80,spread:120,origin:{y:.3},colors:c,startVelocity:20}),800);
 }
 function bigCelebrate(){bigConfetti();showToast('🎉 Happy Birthday, Fraiska! 🎉');}
 function replayAll(){window.scrollTo({top:0,behavior:'smooth'});}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
 
-setTimeout(()=>canvasConfetti({particleCount:100,spread:60,origin:{y:.7},colors:['#ff8fb3','#ff4d8d','#ffd9e6'],startVelocity:18}),2200);
+setTimeout(()=>confetti({particleCount:100,spread:60,origin:{y:.7},colors:['#ff8fb3','#ff4d8d','#ffd9e6'],startVelocity:18}),2200);
 </script>
 </body>
 </html>
